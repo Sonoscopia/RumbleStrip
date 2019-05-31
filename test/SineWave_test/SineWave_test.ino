@@ -1,0 +1,29 @@
+// Test audio (220Hz sinewave)
+
+#include <Audio.h>
+#include <Wire.h>
+#include <SPI.h>
+#include <SD.h>
+#include <SerialFlash.h>
+
+// GUItool: begin automatically generated code
+AudioSynthWaveformSine   SineWave;          //xy=176,361
+AudioOutputI2S           LineOut;           //xy=368,360
+AudioConnection          patchCord1(SineWave, 0, LineOut, 0);
+AudioConnection          patchCord2(SineWave, 0, LineOut, 1);
+AudioControlSGTL5000     AudioShield;     //xy=192,452
+// GUItool: end automatically generated code
+
+void setup(){
+  AudioMemory(10);
+  
+  AudioShield.enable();
+  AudioShield.volume(0.707);
+  
+  SineWave.amplitude(1.0);
+  SineWave.frequency(220);
+}
+
+void loop(){
+
+}
