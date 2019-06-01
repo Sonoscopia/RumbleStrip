@@ -3,7 +3,6 @@
 #include <Audio.h>
 #include <Wire.h>
 #include <SPI.h>
-#include <SD.h>
 #include <SerialFlash.h>
 
 // GUItool: begin automatically generated code
@@ -20,7 +19,7 @@ void setup(){
   AudioShield.enable();
   AudioShield.volume(0.707);
   
-  SineWave.amplitude(1.0);
+  SineWave.amplitude(0.99999);
   SineWave.frequency(220);
 }
 
