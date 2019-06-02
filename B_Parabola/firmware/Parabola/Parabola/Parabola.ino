@@ -22,6 +22,7 @@
 
 Metro* clockmotor;
 Metro* clockseq;
+uint8_t seqpos = 0; // sequencer incremental position 
 
 
 void setup(){
@@ -32,16 +33,11 @@ void setup(){
   AudioMemory(360);// set available buffers
   loadPresets(); // load ALL presets (must go before initAudioObjects)
   newPreset(); // load new preset
+  synthUpdateParams(curPreset, 0);
   initAudioObjects(); //  
-   
-
-  // tempo init
-  clockmotor = new Metro( bpm2ms(RPM) );
-  clock_ms = bpmclock2ms(preset[curPreset].bpm, preset[curPreset].divisions);
-  clockseq = new Metro( clock_ms );
-  
+	  
   //
-  masterVolumes(1, 0., 1, 1);
+  masterVolumes(0.8, 0., 0.8, 0.8);
   Reverb.damping(0.1);
   Reverb.roomsize(0.8);
   sendSynthToA(1.f);
@@ -49,7 +45,6 @@ void setup(){
   delayFeedback(1.f);
   sendDelayToA(1.f);
   FbkDelay.delay(0, clock_ms);
-  
   
   
   delay(WAIT);
@@ -65,7 +60,11 @@ void loop(){
   
   if( clockmotor->check() && clockseq->check() ){
     prob += (direction * PROBINC);
-    if (prob >= PROBMAX)
+	seqpos += direction; 
+	synthUpdateParams(curPreset, seqpos);
+    
+	// reverse direction 
+	if (prob >= PROBMAX)
     {
       direction = -1;
       prob = PROBMAX;
@@ -74,8 +73,10 @@ void loop(){
     {
       direction = 1; 
       prob = PROBMIN; 
+	  newPreset(); 
     }
     
+	
     if(DEBUG){ 
       Serial.println("seq advance");
       Serial.print("direction: ");
@@ -112,6 +113,10 @@ void loop(){
 }
 
 void newPreset(){
-  curPreset = random(numPresets); // selec random preset
-  synthSetPreset(curPreset);
+  curPreset = random(numPresets); // select random preset
+  synthLoadPreset(curPreset);
+  // set tempo
+  clockmotor = new Metro( bpm2ms(RPM) );
+  clock_ms = bpmclock2ms(preset[curPreset].bpm, preset[curPreset].divisions);
+  clockseq = new Metro( clock_ms );
 }

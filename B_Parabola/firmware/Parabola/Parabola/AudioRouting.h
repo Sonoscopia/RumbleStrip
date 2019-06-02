@@ -93,7 +93,6 @@ void initAudioObjects(){
 	for(int i = 1; i < 8; i++){ // disable unused delay taps
 		FbkDelay.disable(i);
 	}
-	FbkDelay.delay(0, MINDELAYSIZE);
 	
 	// MAINMIX
 	MainMix.gain(0, 0.25f); // synth track

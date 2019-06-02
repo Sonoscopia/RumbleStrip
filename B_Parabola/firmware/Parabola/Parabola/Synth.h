@@ -41,15 +41,13 @@ void synthSetVols(float _oscA, float _oscC, float _noise){
 	OscMix.gain(2, _noise*OSCTRACKS);
 }
 
-void synthSetPreset(uint8_t p){
+void synthLoadPreset(uint8_t p){ // run this function once when a new sequence is generated
+	// STATIC VARIABLES
 	// oscillators' frequencies
 	OscA.frequency(preset[p].oscAfreq);
 	OscB.frequency(preset[p].oscBfreq);
 	OscC.frequency(preset[p].oscCfreq);
 	OscD.frequency(preset[p].oscDfreq);
-	// FM modulation amount (start with min. value) 
-	OscB.amplitude(preset[p].oscAmodMin);
-	OscD.amplitude(preset[p].oscCmodMin);
 	// Envelope A
 	EnvA.attack(preset[p].envAatk);
 	EnvA.decay(preset[p].envAdcy);
@@ -75,20 +73,41 @@ void synthSetPreset(uint8_t p){
 	NoiseEnv.decay(preset[p].envNdcy);
 	NoiseEnv.sustain(preset[p].envNsus);
 	NoiseEnv.release(preset[p].envNrel);
-	// Oscillators+Noise Mix
-	OscMix.gain(0, preset[p].oscAvol);
-	OscMix.gain(1, preset[p].oscCvol);
-	OscMix.gain(2, preset[p].noiseVol);
-	// Lowpass Filter
-	Lowpass.frequency(preset[p].filterFreq);
-	Lowpass.resonance(preset[p].filterRes);
-	FilterEnvOffset.amplitude(preset[p].filterEnv);
 	// Filter Envelope
 	FilterEnv.attack(preset[p].envFatk);
 	FilterEnv.decay(preset[p].envFdcy);
 	FilterEnv.sustain(preset[p].envFsus);
 	FilterEnv.release(preset[p].envFrel);
+	
 }
 
+void synthUpdateParams(uint8_t p, uint8_t sp){ // run this function every sequencer increment (p=preset, s=seq position)
+	// VARIABLES CHANGED BY SEQUENCER POSITION
+	
+	// Oscillators+Noise Mix
+	OscMix.gain(0, preset[p].oscAvol[sp]);
+	OscMix.gain(1, preset[p].oscCvol[sp]);
+	OscMix.gain(2, preset[p].noiseVol[sp]);
+	
+	// FM modulation amount
+	OscB.amplitude(preset[p].oscAmod[sp]);
+	OscD.amplitude(preset[p].oscCmod[sp]);
+	
+	// Lowpass Filter
+	Lowpass.frequency(preset[p].filterFreq[sp]);
+	Lowpass.resonance(preset[p].filterRes[sp]);
+	FilterEnvOffset.amplitude(preset[p].filterEnv[sp]);
+	
+	// Reverb 
+	Reverb.roomsize(preset[p].revSize[sp]);
+	Reverb.damping(preset[p].revDamp[sp]);
+	SendA.gain(0, preset[p].revSend[sp]);
+	
+	// Delay
+	SendB.gain(3, preset[p].dlyFb[sp]);
+	FbkDelay.delay(DLYTAP, preset[p].dlyFactor[sp] * clock_ms);
+	SendB.gain(0, preset[p].dlySend[sp]);
+	SendA.gain(3, preset[p].dlyRev[sp]);
+}
 
 #endif /* SYNTH_H_ */

@@ -26,16 +26,14 @@
 #define SHELFGAIN -12.f // Highshelf attenuation
 // SOUND
 #define LPFRANGE 7.f // Lowpass octaveControl (from 0. to 7.)
-#define MINDELAYSIZE 10 // Min. delay size
-#define MAXDELAYFBK 0.9f // Max. delay feedback
-#define MAXREVSIZE 0.9f // Max. reverb size
-#define MINREVDAMP 0.1f // Min. reverb damping
+#define DLYTAP 0 // Delay channel 
 // SEQUENCER
 #define RPM 2.5f // AC motor RPM 2.5 to 3.0
 #define ONEHUNDRED 100 // used for probabilities
-#define  PROBMIN 10
+#define PROBMIN 10
 #define PROBMAX 100
 #define PROBINC 5
+#define SINC 18 // ((PROBMAX-PROBMIN) / PROBINC)-1 = sequencer increments
 
 // Composition
 uint8_t numPresets = 0; // value is auto-updated in PRESETS.h
