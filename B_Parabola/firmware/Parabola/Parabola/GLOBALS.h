@@ -11,7 +11,7 @@
 
 // SYSTEM
 #define DEBUG 1 // print messages to console?
-#define WAIT 1000 // setup wait time in ms
+#define WAIT 3000 // setup wait time in ms
 // VOLUMES
 #define UGAIN 1.0f // unity gain 
 #define MASTERVOL 0.707f

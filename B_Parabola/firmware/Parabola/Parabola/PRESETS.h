@@ -246,7 +246,131 @@ void generateIncrements(){
 	}
 }
 
+void printPresetIncrements(uint8_t p){ // p=preset number
+	// OSC MIX
+	Serial.print("oscAvol: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].oscAvol[i]);
+		Serial.print(" ");		
+	}
+	Serial.println();
+	
+	Serial.print("oscCvol: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].oscCvol[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	Serial.print("noiseVol: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].noiseVol[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	// FM MODULATION AMOUNT
+	Serial.print("oscAmod: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].oscAmod[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	Serial.print("oscCmod: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].oscCmod[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+		
+	//LOWPASS FILTER
+	Serial.print("filterFreq: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].filterFreq[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	Serial.print("filterRes: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].filterRes[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	Serial.print("filterEnv: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].filterEnv[i]);
+		Serial.print(" ");
+	}
+	Serial.println();	
 
+	// REVERB
+	Serial.print("revSize: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].revSize[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	Serial.print("revDamp: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].revDamp[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	Serial.print("revSend: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].revSend[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	// DELAY
+	Serial.print("dlyFb: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].dlyFb[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	Serial.print("dlyFactor: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].dlyFactor[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	Serial.print("dlySend: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].dlySend[i]);
+		Serial.print(" ");
+	}
+	Serial.println();
+	
+	Serial.print("dlyRev: ");
+	for (int i = 0; i < SINC; i++)
+	{
+		Serial.print(preset[p].dlyRev[i]);
+		Serial.print(" ");
+	}
+}
 
 
 #endif /* PRESETS_H_ */

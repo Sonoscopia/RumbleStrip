@@ -53,6 +53,8 @@ void setup(){
     printMaxMemUsage();
     Serial.print("clock_ms: ");
     Serial.println(clock_ms);
+	
+	printPresetIncrements(curPreset);
   }
 }
 
