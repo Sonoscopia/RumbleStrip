@@ -41,7 +41,7 @@ void setup(){
   clockseq = new Metro( clock_ms );
   
   //
-  masterVolumes(1., 0., 1., 1.);
+  masterVolumes(1, 0., 1, 1);
   Reverb.damping(0.1);
   Reverb.roomsize(0.8);
   sendSynthToA(1.f);

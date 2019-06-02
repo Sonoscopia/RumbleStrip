@@ -30,8 +30,8 @@
 #define MAXDELAYFBK 0.9f // Max. delay feedback
 #define MAXREVSIZE 0.9f // Max. reverb size
 #define MINREVDAMP 0.1f // Min. reverb damping
-// COMPOSITION
-#define RPM 15.f // AC motor RPM 2.5 to 3.0
+// SEQUENCER
+#define RPM 2.5f // AC motor RPM 2.5 to 3.0
 #define ONEHUNDRED 100 // used for probabilities
 #define  PROBMIN 10
 #define PROBMAX 100
