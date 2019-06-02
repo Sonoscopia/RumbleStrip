@@ -30,10 +30,17 @@ void setup(){
   randomSeed(analogRead(A0)); // set random seed
   
   AudioMemory(360);// set available buffers
-  initPresets(); // instantiate presets (must go before initAudioObjects)
-  initAudioObjects(); 
+  loadPresets(); // load ALL presets (must go before initAudioObjects)
+  newPreset(); // load new preset
+  initAudioObjects(); //  
+   
+
+  // tempo init
+  clockmotor = new Metro( bpm2ms(RPM) );
+  clock_ms = bpmclock2ms(preset[curPreset].bpm, preset[curPreset].divisions);
+  clockseq = new Metro( clock_ms );
   
-  newPreset();
+  //
   masterVolumes(1., 0., 1., 1.);
   Reverb.damping(0.1);
   Reverb.roomsize(0.8);
@@ -41,12 +48,9 @@ void setup(){
   sendSynthToB(1.f);
   delayFeedback(1.f);
   sendDelayToA(1.f);
-  FbkDelay.delay(0, 500);
+  FbkDelay.delay(0, clock_ms);
   
-  // tempo init
-  clockmotor = new Metro( bpm2ms(RPM) );
-  clock_ms = bpmclock2ms(bpm, divisions);
-  clockseq = new Metro( 250 );
+  
   
   delay(WAIT);
   if (DEBUG)
@@ -95,7 +99,7 @@ void loop(){
         Serial.println(stepprob);
       }
       // NOTE OFF 
-      uint16_t notedur = noteduration2ms(clock_ms, noteduration);
+      uint16_t notedur = noteduration2ms(clock_ms, preset[curPreset].noteduration);
       delay( 25 );
       if (DEBUG)
       {
@@ -109,5 +113,5 @@ void loop(){
 
 void newPreset(){
   curPreset = random(numPresets); // selec random preset
-  synthSetPreset(0);
+  synthSetPreset(curPreset);
 }

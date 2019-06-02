@@ -14,6 +14,10 @@
 #include <sstream>*/
 
 struct synthpreset{
+	// SEQUENCER
+	float bpm;
+	float divisions; // beats per measure
+	float noteduration; // percentage of clock_ms 1.0
 	// OSCILLATORS
 	float oscAfreq, oscBfreq, oscCfreq, oscDfreq; // oscillators frequencies in Hz
 	float oscAmodMin, oscCmodMin; // OscB gain and OscD gain respectively
@@ -30,9 +34,13 @@ struct synthpreset{
 	float filterEnv; // filter envelope amount
 } preset[1];// => SET AMOUNT OF PRESETS MANUALLY !!!!
 
-void initPresets(){ // declare preset values
+void loadPresets(){ // declare preset values
 	// begin PRESET #1
 	int p = 0; // set preset num
+	// SEQUENCER
+	preset[curPreset].bpm = 100.f;
+	preset[curPreset].divisions = 4.f; // beats per measure
+	preset[curPreset].noteduration = 0.5; // percentage of clock_ms 1.0
 	// OSC FREQ
 	preset[p].oscAfreq = 220.f;
 	preset[p].oscBfreq = 220.f;

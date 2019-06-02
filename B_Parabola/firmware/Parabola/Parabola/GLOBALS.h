@@ -46,10 +46,8 @@ int8_t direction = 1; // 1 (up) or -1 (down)
  
 boolean synthsilence; 
 boolean samplersilence; 
-float bpm = 100.f; 
-float divisions = 4.f; // beats per measure
 uint16_t clock_ms; // sequencer clock in ms
-float noteduration = 0.5; // percentage of clock_ms 1.0 
+ 
 // Sound
 uint16_t delaytime; // delay time in ms
 uint16_t delayfbk; // feedback level from 0. to 1.
