@@ -121,8 +121,8 @@ void loadPresets(){ // declare preset values
 	// DELAY
 	preset[p].dlyFb[0] = 0.9;
 	preset[p].dlyFb[SINC-1] = 0.1;
-	preset[p].dlyFactor[0] = 4;
-	preset[p].dlyFactor[SINC-1] = 0.5;
+	preset[p].dlyFactor[0] = 1.5;
+	preset[p].dlyFactor[SINC-1] = 0.125;
 	preset[p].dlySend[0] = 1.2;
 	preset[p].dlySend[SINC-1] = 0.1;
 	preset[p].dlyRev[0] = 0.8;
