@@ -29,19 +29,19 @@ void setup(){
   
   randomSeed(analogRead(A0)); // set random seed
   
-  AudioMemory(180);// set available buffers
+  AudioMemory(360);// set available buffers
   initPresets(); // instantiate presets (must go before initAudioObjects)
   initAudioObjects(); 
   
   newPreset();
-  masterVolumes(1., 0., 0., 0.);
-  /*Reverb.damping(0.1);
-  Reverb.roomsize(0.7);
+  masterVolumes(1., 0., 1., 1.);
+  Reverb.damping(0.1);
+  Reverb.roomsize(0.8);
   sendSynthToA(1.f);
   sendSynthToB(1.f);
-  delayFeedback(1.3f);
+  delayFeedback(1.f);
   sendDelayToA(1.f);
-  FbkDelay.delay(0, 500);*/
+  FbkDelay.delay(0, 500);
   
   // tempo init
   clockmotor = new Metro( bpm2ms(RPM) );
