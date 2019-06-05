@@ -1,0 +1,18 @@
+/*
+ * Plates.cpp
+ *
+ * Created: 05-06-2019 23:17:56
+ * Author : tiago
+ */ 
+
+#include <avr/io.h>
+
+
+int main(void)
+{
+    /* Replace with your application code */
+    while (1) 
+    {
+    }
+}
+
