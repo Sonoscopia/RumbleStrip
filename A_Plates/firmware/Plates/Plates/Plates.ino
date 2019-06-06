@@ -34,9 +34,13 @@ void setup()
 
 void loop()
 {
-	
 	delay(TIMERINC); // 1ms delay used to update clockTimer 
-	clockTimer++; 
+	clockTimer+=TIMERINC; 
+	voice1TriggerEvents(clockTimer);
+	voice2TriggerEvents(clockTimer);
+	if(clockTimer > preset[curPreset].sectionDuration) {
+		newPreset();
+	}
 }
 
 void newPreset(){
