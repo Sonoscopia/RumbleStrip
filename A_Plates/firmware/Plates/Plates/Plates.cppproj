@@ -75,6 +75,7 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SPI</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SerialFlash</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Metro</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD/utility</Value>
@@ -118,6 +119,7 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SPI</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SerialFlash</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Metro</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD/utility</Value>
@@ -141,12 +143,12 @@
   <avrgcccpp.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
-      <Value>Audio.h</Value>
     </ListValues>
   </avrgcccpp.linker.libraries.Libraries>
   <avrgcccpp.linker.libraries.LibrarySearchPaths>
     <ListValues>
       <Value>C:\Program Files (x86)\Arduino\hardware\teensy\avr\libraries\Audio</Value>
+      <Value>C:\Program Files (x86)\Arduino\hardware\teensy\avr\libraries\Metro</Value>
     </ListValues>
   </avrgcccpp.linker.libraries.LibrarySearchPaths>
   <avrgcccpp.assembler.general.IncludePaths>
@@ -157,7 +159,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>../../../Plates;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries;C:/Users/tiago/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3/avr;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3/util;{vmresolved.compiler.path}arm/arm-none-eabi/include;{vmresolved.compiler.path}arm/lib/gcc/arm-none-eabi/5.4.1/include;C:/Program Files (x86)/Arduino/hardware/teensy;C:/Program Files (x86)/Arduino/arm/arm-none-eabi/include;C:/Program Files (x86)/Arduino/arm/lib/gcc/arm-none-eabi/5.4.1/include;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SerialFlash;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>../../../Plates;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries;C:/Users/tiago/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3/avr;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3/util;{vmresolved.compiler.path}arm/arm-none-eabi/include;{vmresolved.compiler.path}arm/lib/gcc/arm-none-eabi/5.4.1/include;C:/Program Files (x86)/Arduino/hardware/teensy;C:/Program Files (x86)/Arduino/arm/arm-none-eabi/include;C:/Program Files (x86)/Arduino/arm/lib/gcc/arm-none-eabi/5.4.1/include;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SerialFlash;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Metro;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings xmlns="">
         <ValidatedAS7>1</ValidatedAS7>
@@ -196,6 +198,7 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SPI</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SerialFlash</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Metro</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD/utility</Value>
@@ -239,6 +242,7 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SPI</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SerialFlash</Value>
+      <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Metro</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD/utility</Value>
@@ -262,12 +266,12 @@
   <avrgcccpp.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
-      <Value>Audio.h</Value>
     </ListValues>
   </avrgcccpp.linker.libraries.Libraries>
   <avrgcccpp.linker.libraries.LibrarySearchPaths>
     <ListValues>
       <Value>C:\Program Files (x86)\Arduino\hardware\teensy\avr\libraries\Audio</Value>
+      <Value>C:\Program Files (x86)\Arduino\hardware\teensy\avr\libraries\Metro</Value>
     </ListValues>
   </avrgcccpp.linker.libraries.LibrarySearchPaths>
   <avrgcccpp.assembler.general.IncludePaths>
@@ -278,7 +282,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>../../../Plates;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries;C:/Users/tiago/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3/avr;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3/util;{vmresolved.compiler.path}arm/arm-none-eabi/include;{vmresolved.compiler.path}arm/lib/gcc/arm-none-eabi/5.4.1/include;C:/Program Files (x86)/Arduino/hardware/teensy;C:/Program Files (x86)/Arduino/arm/arm-none-eabi/include;C:/Program Files (x86)/Arduino/arm/lib/gcc/arm-none-eabi/5.4.1/include;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SerialFlash;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>../../../Plates;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries;C:/Users/tiago/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3/avr;C:/Program Files (x86)/Arduino/hardware/teensy/avr/cores/teensy3/util;{vmresolved.compiler.path}arm/arm-none-eabi/include;{vmresolved.compiler.path}arm/lib/gcc/arm-none-eabi/5.4.1/include;C:/Program Files (x86)/Arduino/hardware/teensy;C:/Program Files (x86)/Arduino/arm/arm-none-eabi/include;C:/Program Files (x86)/Arduino/arm/lib/gcc/arm-none-eabi/5.4.1/include;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Audio/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Wire/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SPI;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SD/utility;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/SerialFlash;C:/Program Files (x86)/Arduino/hardware/teensy/avr/libraries/Metro;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings xmlns="">
         <ValidatedAS7>1</ValidatedAS7>
@@ -286,7 +290,22 @@
     </VisualMicroSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AudioRouting.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GLOBALS.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Plates.ino">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="PRESETS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Utilities.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Voices.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="__vm\.Plates.vsarduino.h">

@@ -20,6 +20,7 @@
 #define LAYOUT_US_ENGLISH
 //
 //
+void newPreset();
 
 #include "arduino.h"
 #include "Plates.ino"

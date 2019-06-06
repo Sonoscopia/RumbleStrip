@@ -11,31 +11,33 @@
 #include <SPI.h>
 #include <SD.h>
 #include <SerialFlash.h>
+#include <Metro.h>
+// my includes
+#include "GLOBALS.h"
+#include "AudioRouting.h"
+#include "PRESETS.h"
+#include "Voices.h"
 
-// GUItool: begin automatically generated code
-AudioSynthWaveformSine   SineWave;          //xy=176,361
-AudioOutputI2S           LineOut;           //xy=368,360
-AudioConnection          patchCord1(SineWave, 0, LineOut, 0);
-AudioConnection          patchCord2(SineWave, 0, LineOut, 1);
-AudioControlSGTL5000     AudioShield;     //xy=192,452
-// GUItool: end automatically generated code
 
 void setup()
 {
-	AudioMemory(10);
+	if(DEBUG) Serial.begin(9600);
+	randomSeed(analogRead(0));
 	
-	AudioShield.enable();
-	AudioShield.volume(0.707);
+	initAudioObjects();
+	loadPresets();
 	
-	SineWave.amplitude(0.99999);
-	SineWave.frequency(220);
-	  
-
+	delay(WAIT);
 }
 
 void loop()
 {
 
 	  
+	delay(TIMERINC); // 1ms delay used to update clockTimer 
+	clockTimer++; 
+}
 
+void newPreset(){
+	curPreset = random(numPresets);
 }
