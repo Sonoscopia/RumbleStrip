@@ -12,6 +12,7 @@
 #include <SD.h>
 #include <SerialFlash.h>
 #include <Metro.h>
+
 // my includes
 #include "GLOBALS.h"
 #include "AudioRouting.h"
@@ -40,4 +41,6 @@ void loop()
 
 void newPreset(){
 	curPreset = random(numPresets);
+	voice1LoadPreset(curPreset);
+	voice2LoadPreset(curPreset);
 }

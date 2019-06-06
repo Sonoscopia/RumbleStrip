@@ -13,6 +13,7 @@
 #define DEBUG 1 // print messages to console?
 #define WAIT 3000 // setup wait time in ms
 #define TIMERINC 1 
+#define ES 4 // event size=4 (onset, fadein, hold, fadeout)
 // VOLUMES
 #define UGAIN 1.f // unity gain
 #define HGAIN 0.5f // half gain (~ -6dB)
@@ -40,6 +41,6 @@
 // Composition
 uint8_t numPresets = 0; // value is auto-updated in PRESETS.h
 uint8_t curPreset;
-unsigned long int clockTimer = 0; // max = 4294967295 which is more than enough
+uint32_t clockTimer = 0; // max = 4294967295 which is more than enough
 
 #endif /* GLOBALS_H_ */
