@@ -9,6 +9,9 @@
 #ifndef VOICE1_H_
 #define VOICE1_H_
 
+boolean ac1Trig, am1Trig, bc1Trig, bm1Trig, n1Trig, bp1Trig;
+boolean ac2Trig, am2Trig, bc2Trig, bm2Trig, n2Trig, bp2Trig; 
+
 void voice1LoadPreset(uint8_t p){ // preset number
 	// synth A
 	CarrierA1.frequency(preset[p].carrierA1Freq);
@@ -55,6 +58,28 @@ void voice2LoadPreset(uint8_t p){ // preset number
 	// fx mix
 	FXMix2.gain(0, 1.f - preset[p].fxmix2);
 	FXMix2.gain(1, preset[p].fxmix2);
+}
+
+void resetTriggers(){
+	ac1Trig = false;
+	am1Trig = false;
+	bc1Trig = false;
+	bm1Trig = false;
+	n1Trig = false;
+	bp1Trig = false;
+	ac2Trig = false;
+	am2Trig = false;
+	bc2Trig = false;
+	bm2Trig = false;
+	n2Trig = false;
+	bp2Trig = false;
+}
+
+void voice1TriggerEvents(uint32_t ctime){ // (clockTimer)
+	if (ctime > preset[curPreset].carrierA1Onset && ac1Trig == false)
+	{	
+		
+	}
 }
 
 #endif /* VOICE1_H_ */

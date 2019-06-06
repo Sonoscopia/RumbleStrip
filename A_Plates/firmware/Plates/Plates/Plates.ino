@@ -25,6 +25,7 @@ void setup()
 	if(DEBUG) Serial.begin(9600);
 	randomSeed(analogRead(0));
 	
+	AudioMemory(360);// set available buffers
 	initAudioObjects();
 	loadPresets();
 	
@@ -33,8 +34,7 @@ void setup()
 
 void loop()
 {
-
-	  
+	
 	delay(TIMERINC); // 1ms delay used to update clockTimer 
 	clockTimer++; 
 }
@@ -43,4 +43,5 @@ void newPreset(){
 	curPreset = random(numPresets);
 	voice1LoadPreset(curPreset);
 	voice2LoadPreset(curPreset);
+	resetTriggers();
 }
