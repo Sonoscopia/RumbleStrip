@@ -28,6 +28,7 @@ void setup()
 	AudioMemory(360);// set available buffers
 	initAudioObjects();
 	loadPresets();
+	newPreset();
 	
 	delay(WAIT);
 }
@@ -40,6 +41,8 @@ void loop()
 	voice2TriggerEvents(clockTimer);
 	if(clockTimer > preset[curPreset].sectionDuration) {
 		newPreset();
+		clockTimer = 0; 
+		if(DEBUG) Serial.println("new preset");
 	}
 }
 

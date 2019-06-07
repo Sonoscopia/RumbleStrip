@@ -101,7 +101,7 @@ void loadPresets(){ // declare preset values
 	preset[p].modB1Freq = 111;
 	preset[p].modB1Amt = 1.f; // modulation amount from 0. to 1.
 	// synth Noise1
-	preset[p].bp1freq = 8000;
+	preset[p].bp1freq = 400;
 	preset[p].bp1res = 0.707;
 	preset[p].bp1AmtOctaves = 1.5; //Range is 0 to 7 octaves
 	preset[p].bp1EnvAmt = 0;
@@ -124,7 +124,7 @@ void loadPresets(){ // declare preset values
 	preset[p].modB2Freq = 111;
 	preset[p].modB2Amt = 1.f; // modulation amount from 0. to 1.
 	// synth Noise1
-	preset[p].bp2freq = 8000;
+	preset[p].bp2freq = 400;
 	preset[p].bp2res = 0.707;
 	preset[p].bp2AmtOctaves = 1.5; //Range is 0 to 7 octaves
 	preset[p].bp2EnvAmt = 0;

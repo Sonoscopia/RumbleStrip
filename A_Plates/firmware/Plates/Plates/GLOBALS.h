@@ -19,21 +19,21 @@
 #define HGAIN 0.5f // half gain (~ -6dB)
 #define MASTERVOL 0.707f
 #define SYNTHMIX 0.333f // 3 tracks at SynthMix1&2 normalize at 0.33
-#define TRACK1 0.891251f // Bass Shaker volume (-1dB)
-#define TRACK2 0.158489f // Treble shakers volume (-16dB)
+#define TRACK1VOL 0.891251f // Bass Shaker volume (-1dB)
+#define TRACK2VOL 0.158489f // Treble shakers volume (-16dB)
 #define DRY 0.f 
 #define WET 1.f
 // FX
 #define TAP 0 // delay tap #0
 #define SR 44100 // sample rate
 #define BD 16 // bit depth
-// EQ - TRACK 1
+// EQ - TRACK 1 (sub)
 #define HP1 30 // track1 hi pass freq
 #define HP1RES 0.707 // track1 hi pass resonance 
 #define LP1 12000 // track1 lo pass freq
 #define LP1RES 0.707 // track1 lo pass resonance
-// EQ - TRACK 2
-#define HP2 75 // track2 hi pass freq
+// EQ - TRACK 2 (treble)
+#define HP2 70 // track2 hi pass freq
 #define HP2RES 0.707 // track2 hi pass resonance
 #define LP2 16000 // track2 lo pass freq
 #define LP2RES 0.707 // track2 lo pass resonance

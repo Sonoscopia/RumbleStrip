@@ -110,15 +110,23 @@ void initAudioObjects(){
 		Delay1.disable(i);
 	}
 	
-	// INIT VOLUMES TRACK1
+	// INIT TRACK1 (sub)
 	CarrierA1.amplitude(UGAIN);
 	CarrierB1.amplitude(UGAIN);
 	Noise1.amplitude(HGAIN);
 	Feedback1.gain(0, HGAIN);
-	// INIT VOLUMES TRACK2
+	OutMixer1.gain(0, UGAIN);
+	EQ1.setLowpass(0, LP1, LP1RES);
+	EQ1.setHighpass(1, HP1, HP1RES);
+	VolTrack1.gain(TRACK1VOL);
+	// INIT TRACK2 (treble)
 	CarrierA2.amplitude(UGAIN);
 	CarrierB2.amplitude(UGAIN);
 	Noise2.amplitude(HGAIN);
+	OutMixer2.gain(0, UGAIN);
+	EQ2.setLowpass(0, LP2, LP2RES);
+	EQ2.setHighpass(1, HP2, HP2RES);
+	VolTrack2.gain(TRACK2VOL);
 	
 }
 
